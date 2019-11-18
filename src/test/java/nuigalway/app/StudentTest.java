@@ -37,8 +37,6 @@ public class StudentTest
     public void testStudentCreation(){
         assertTrue(student.getName().equals(name));
         assertTrue(student.getDob().equals(dob));
-        assertTrue(student.getCourse() == null);
-        assertTrue(student.getModules() == null);
     }
 
     @Test
