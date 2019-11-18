@@ -13,7 +13,7 @@ public class Student {
     private int id;
     private String username;
     private CourseProgramme course;
-    private ArrayList<Module> modules;
+    private ArrayList<Module> modules = new ArrayList<>();
 
     static int ids = 0;
 

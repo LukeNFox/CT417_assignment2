@@ -2,6 +2,7 @@ package nuigalway.app;
 
 import org.joda.time.LocalDate;
 import org.junit.Test;
+
 import java.util.ArrayList;
 import static org.junit.Assert.*;
 
@@ -20,7 +21,7 @@ public class StudentTest
     private LocalDate newDOB = new LocalDate(2017,10,15);
 
     private CourseProgramme course = null;
-    private ArrayList<Module> module = null;
+    private ArrayList<Module> module = new ArrayList<>();
 
     @Test
     public void testUsername() {
@@ -52,6 +53,16 @@ public class StudentTest
 
     @Test
     public void testModule(){
+        String name = "Software Engineering";
+        String id = "CT4317";
+        Module module = new Module(name,id);
+        Module module2 = new Module(name,id);
+        student.addModule(module);
+        student.addModule(module2);
+        ArrayList<Module> modules = new ArrayList<>();
+        modules.add(module);
+        modules.add(module2);
+        assertEquals(student.getModules(),modules);
 
     }
 
