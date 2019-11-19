@@ -42,9 +42,11 @@ public class Module {
         return relatedCourses;
     }
 
+    public void addCourse(CourseProgramme course) {
+            this.relatedCourses.add(course);
+    }
+
     public void setCourses(ArrayList<CourseProgramme> courses) {
-        for(CourseProgramme x: courses) {
-            this.relatedCourses.add(x);
-        }
+        this.relatedCourses = courses;
     }
 }
