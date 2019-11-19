@@ -44,6 +44,21 @@ public class ModuleTest {
 
     @Test
     public void testCourse(){
+        ArrayList<CourseProgramme> courses = new ArrayList<CourseProgramme>();
+        CourseProgramme course1 = new CourseProgramme("Computer Science");
+        CourseProgramme course2 = new CourseProgramme("Science");
+
+        assertEquals(module.getCourses(),courses);
+
+        courses.add(course1);
+        module.addCourse(course1);
+
+        assertEquals(module.getCourses(),courses);
+
+        courses.add(course2);
+        module.setCourses(courses);
+
+        assertEquals(module.getCourses(),courses);
 
     }
 }

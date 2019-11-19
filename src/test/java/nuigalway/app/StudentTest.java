@@ -8,7 +8,6 @@ import static org.junit.Assert.*;
 
 public class StudentTest
 {
-
     private LocalDate dob = new LocalDate(1997,10,15);
     private int age = 22;
     private String name = "Luke";
@@ -66,7 +65,9 @@ public class StudentTest
 
     @Test
     public void testCourse(){
-
+        CourseProgramme course = new CourseProgramme("Computer Science");
+        student.setCourse(course);
+        assertEquals(student.getCourse(),course);
 
     }
 }
